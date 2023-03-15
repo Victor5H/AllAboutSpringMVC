@@ -32,6 +32,18 @@ public class HomeController {
 		return "modelDemo";
 	}
 
+	@RequestMapping("modelAndViewDemo")
+	public ModelAndView modelViewDemo() {
+		ModelAndView modelAndView = new ModelAndView();
+		List<String> list = new ArrayList<>();
+		list.add("Ak47");
+		list.add("M249");
+		list.add("Desert Eagle");
+		modelAndView.addObject("guns", list);
+		modelAndView.setViewName("modelAndViewDemo");
+		return modelAndView;
+	}
+
 	@RequestMapping("registerEmp")
 	public ModelAndView homePage() {
 		ModelAndView mView = new ModelAndView();
