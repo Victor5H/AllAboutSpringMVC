@@ -19,6 +19,8 @@ pageEncoding="ISO-8859-1"
 <br>
 <a href="home">Home</a> <br>
 <a href="registerEmp">Employee Registration</a> <br>
-<a href="modelAndViewDemo">Model and View Demo</a>
+<a href="modelAndViewDemo">Model and View Demo</a><br>
+<a href="allEmployees">All employees</a><br>
+<a href="deleteEmp">Delete Emp</a>
 </body>
 </html>

@@ -17,7 +17,7 @@ pageEncoding="ISO-8859-1"
 
         <div class="container">
             <h1>EMP registration</h1>
-            <form action="post">
+            <form action="postEmp" method="post">
                 <input type="text" name="id" placeholder="Id" class="form-control" /> <br>
                 <input type="text" name="name" placeholder="Name" class="form-control"/> <br>
                 <input type="text" name="email" placeholder="Email" class="form-control" /> <br>

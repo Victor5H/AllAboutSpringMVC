@@ -2,8 +2,19 @@ package io.github.Victor5H.model;
 
 public class Employee {
 	private int id;
-	private String nameString;
-	private String emailString;
+	private String name;
+	private String email;
+
+	public Employee() {
+		super();
+	}
+
+	public Employee(int id, String name, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;
@@ -13,36 +24,25 @@ public class Employee {
 		this.id = id;
 	}
 
-	public String getNameString() {
-		return nameString;
+	public String getName() {
+		return name;
 	}
 
-	public void setNameString(String nameString) {
-		this.nameString = nameString;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getEmailString() {
-		return emailString;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmailString(String emailString) {
-		this.emailString = emailString;
-	}
-
-	public Employee(int id, String nameString, String emailString) {
-		super();
-		this.id = id;
-		this.nameString = nameString;
-		this.emailString = emailString;
-	}
-
-	public Employee() {
-		super();
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", nameString=" + nameString + ", emailString=" + emailString + "]";
+		return "Employee [id=" + id + ", name=" + name + ", email=" + email + "]";
 	}
 
 }
