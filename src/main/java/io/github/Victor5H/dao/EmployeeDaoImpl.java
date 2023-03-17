@@ -68,6 +68,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public Employee selectOne(int id) {
 		String query = "select * from employee where id = ? limit 1";
-		return template.queryForObject(query, new EmpRowMapper(), id);
+		Employee employee = null;
+		try {
+			employee = template.queryForObject(query, new EmpRowMapper(), id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println(employee);
+		return employee;
 	}
 }

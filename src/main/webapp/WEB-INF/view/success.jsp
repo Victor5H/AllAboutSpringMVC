@@ -11,8 +11,8 @@
 </head>
 <body>
 <h1>Got data from controller into view</h1>
-<h1>${emp.name}</h1>
-<h1> ${emp.email }</h1>
-<h1> ${emp.id }</h1>
+<h1>${emp.name()}</h1>
+<h1> ${emp.email() }</h1>
+<h1> ${emp.id ()}</h1>
 </body>
 </html>

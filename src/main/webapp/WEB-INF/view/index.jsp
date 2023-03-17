@@ -12,15 +12,16 @@ pageEncoding="ISO-8859-1"
 <meta charset="ISO-8859-1">
 <title>Index page</title>
 </head>
-<body class="text-center">
+<body class="text-center container-fluid">
 <h1>This is the Index page</h1>
 <br>
-<a href="modelDemo">modelDemo</a>
-<br>
-<a href="home">Home</a> <br>
-<a href="registerEmp">Employee Registration</a> <br>
-<a href="modelAndViewDemo">Model and View Demo</a><br>
-<a href="allEmployees">All employees</a><br>
-<a href="deleteEmp">Delete Emp</a>
+
+<a class="btn btn-primary mb-2" href="home">Home </a><br>
+<a class="btn btn-primary mb-2" href="registerEmp">Employee Registration</a> <br>
+<a class="btn btn-primary mb-2" href="allEmployees">List all employees</a><br>
+<a class="btn btn-primary mb-2" href="findEmployee">Find Emp</a><br>
+<a class="btn btn-primary mb-2" href="deleteEmp">Delete Emp</a><br>
+<a class="btn btn-primary mb-2" href="modelAndViewDemo">Model and View Demo</a><br>
+<a class="btn btn-primary mb-2" href="modelDemo" >modelDemo</a><br>
 </body>
 </html>

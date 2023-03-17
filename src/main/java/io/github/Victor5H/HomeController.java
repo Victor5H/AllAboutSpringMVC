@@ -73,8 +73,8 @@ public class HomeController {
 //		return mView;
 //	}
 	@RequestMapping(path = "postEmp", method = RequestMethod.POST)
-	public ModelAndView gotEmp(@ModelAttribute Employee emp) {
-		ModelAndView mView = new ModelAndView();
+	public ModelAndView gotEmp(@ModelAttribute Employee emp, ModelAndView mView) {
+		mView = new ModelAndView();
 		mView.setViewName("success");
 		employeeService.insertEmp(emp);
 		return mView;
@@ -101,5 +101,22 @@ public class HomeController {
 		boolean flag = employeeService.deleteEmp(id);
 		modelAndView.addObject("flag", flag);
 		return modelAndView;
+	}
+
+	@RequestMapping("findEmployee")
+	public String findOneEmp() {
+		return "searchEmp";
+	}
+
+	@RequestMapping(path = "postFind", method = RequestMethod.POST)
+	public String postFind(@RequestParam("id") int id, Model m) {
+		Employee employee = employeeService.selectEmpById(id);
+		if (employee == null) {
+			m.addAttribute("flag", false);
+		} else {
+			m.addAttribute("flag", true);
+		}
+		m.addAttribute("emp", employee);
+		return "resultEmp";
 	}
 }
